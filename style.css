@@ -1,0 +1,372 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --orange-clair: #fcdcc5;           /* Fond des onglets "Breakfast", "Lunch", etc. */
+  --orange-foncé: #cc5200;           /* Hover ou couleur plus foncée du orange */
+  --gris-foncé: #1a1a1a;             /* Background de la section supérieure */
+  --fond-form: #f5f5f5;              /* Fond du formulaire de commande */
+  --borde-form: #dddddd;             /* Bordure des champs du formulaire */
+  --footer-noir: #000000;            /* Fond du footer */
+  --footer-orange: #ff6600;          /* Icones/infos dans le footer */
+}
+
+
+
+.PAGE1
+{
+    height: 780px;
+    width: 100%;
+    background-image: url(FOND.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.NAVBAR
+{
+    width: 100%;
+    height: 70px;
+    display: flex;
+      gap: 500px;
+      padding: 20px;
+}
+
+.navbar ul div
+{
+   
+   gap: 24px;
+   padding: 20px;
+   padding-left: 10%;
+   height: 50px;
+   display: flex;
+   color: rgb(0, 136, 255);
+   position: relative;
+}
+.BOUBOU{ height: 45px;width: 86px;border-radius: 37px; top: 20px; } .Logo2 { font-size: 34px ;margin-left: 2%;padding-top: 1%;}
+
+.Container
+{
+    margin-top: 8%;
+    height: 70%;
+    display: flex;
+ justify-content: center;
+ gap: 25px;
+}
+
+.texte
+{
+    gap: 79px;
+}
+.texte h2 span{ color: var(--orange-foncé);} .texte h3 { color: #dddddd; }
+.texte h2 { font-size: 47px; color: #dddddd; } .texte p{  color: #fcdcc5;}
+
+.IMAGE img
+{width: 100%;height: 100%; } 
+.IMAGE{ height: 400px; } 
+
+button
+{
+    width: 50%;
+    height: 90px;
+    bottom: -45px; position: relative;
+}
+.btn1 { background-color: aliceblue; color: #000000; height: 38px; width: 20%; border-radius: 45px;}
+.btn2 { background-color: #dddddd; color: #000000; height: 38px; width: 20%; border-radius: 45px;}
+
+.hamburger
+{
+    display: none;
+    font-size: 2rem;
+    color: aliceblue;
+    cursor: pointer;
+}
+.menu-toogle{display: none;}
+
+
+/* CONFIGURATION DE PAGE 2  */
+
+.PAGE2
+{
+    height: 1200px;
+    width: 100%;
+    background-color:var(--fond-form);
+}
+
+.ABOUT
+{
+    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.IMG 
+{
+    background-image: url(Cuisinier\ \(1\).jpg)  ,url(splash1.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+    
+}
+
+.ABOUT .about  {
+    border-radius: 25px;
+    height: 38px;
+    width: 10%;
+    position: absolute;
+    top: 315px;
+} 
+.IMG1 h1 { top: 15px;  font-size: 33px; color: var(--orange-foncé); }
+.IMG1 p{ margin-top: 60px; }
+
+.SPECIAL
+{
+height: 165px;width: 100%;top: 34px; position: relative;
+align-items: center;justify-content: center;text-align: center;
+}
+
+    .SPECIAL h2 { font-size: 34px;}
+.BOUTTON
+{
+background-color: rgb(248, 194, 174);width: 100%;height: 100px;gap: 30px;display: flex;
+top: 24px;position: relative;align-items: center; justify-content: center;
+}
+
+.Boutton{
+  height: 38px; width: 20%; border-radius: 45px;   position: relative; top: 10px;
+}
+
+.Menu 
+{
+position: relative;top: 70px;display: flex;height: 500px;width: 100%; gap: 40px;
+}
+.MENU{ background-color: rgb(255, 253, 253); height: 450px; width: 40%; 
+     margin-left: 40px; padding: -100px; box-shadow:  6px 5px 5px black;}
+.Menu1
+{
+     height: 500px;  position: relative; top: 45px;left: 25px;
+    background-repeat: no-repeat;background-size: 90%;background-image: url(MENU.jpg);
+}
+.Menu2
+{
+height: 450px; width: 50%;
+}
+.Menu2 ul li {  margin-bottom: 34px; top: 95px; position: relative;}
+
+/*  CONFIGURATION DE PAGE3 */
+
+.PAGE3
+{
+     height: 1200px;
+    width: 100%;
+    background-color:#f0a878;
+}
+.PAGE3 h2{top: 17px;position: relative;}
+
+.Presentation1
+{margin-top: 64px;
+height: 500px;width: 100%; display: grid;gap: 20px; grid-template-columns: 1fr 1fr 1fr;
+}
+
+.carte
+{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.prix1
+{
+        background-image: url(plat1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 100%;
+}
+
+.prix2
+{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 15px;
+    height: 180px;
+}
+
+.CMD
+{
+     height: 38px; width: 40%; border-radius: 45px;   position: relative; top: 10px;
+}
+.prix2 h3 { position: relative; top :-35px ; font-size: 27px;}
+.prix2 p { font-size: 28px;}
+.prix { background-image: url(plat2.jpg);background-size: cover;
+    background-repeat: no-repeat; height: 300px;width: 100%;}
+.Prix 
+{
+background-image: url(plat12.jpg);background-size: cover;
+ background-repeat: no-repeat;height: 300px;width: 100%;
+}
+
+.Presentation2
+{
+    margin-top: 67px;
+    height: 500px;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.carte2
+{
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.prix4
+{
+        background-image: url(plat4.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 100%;
+}
+
+.prix3
+{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 15px;
+    height: 180px;
+}
+
+.CMD1
+{
+     height: 38px; width: 40%; border-radius: 45px;   position: relative; top: 10px;
+}
+.prix3 h3 { position: relative; top :-35px ; font-size: 27px;}
+.prix3 p { font-size: 28px;}
+.Prix { background-image: url(plat5.jpg);background-size: cover;
+    background-repeat: no-repeat; height: 300px;width: 100%;}
+.Prix1 
+{
+background-image: url(plat6.jpg);background-size: cover;
+ background-repeat: no-repeat;height: 300px;width: 100%;
+}
+
+.PAGE3 h2 { text-align: center;}
+
+
+/*  CONFIGURATION DE LA PAGE 4  */ 
+.PAGE4
+{
+height: 1400px;
+    width: 100%;
+    margin-top: 90px;
+}
+
+.IMAGE1{background-image: url(plat7.jpg);background-size: cover;background-repeat: no-repeat;}
+.IMAGE2{background-image: url(plat8.jpg);background-size: cover;background-repeat: no-repeat;}
+.IMAGE3{background-image: url(plat9.jpg);background-size: cover;background-repeat: no-repeat;}
+.IMAGE4{background-image: url(plat12.jpg);background-size: cover;background-repeat: no-repeat;}
+
+.IMAGE5{background-image: url(plat11.jpg);background-size: cover;background-repeat: no-repeat;}
+
+.IMAGE6{background-image: url(plat10.jpg);background-size: cover;background-repeat: no-repeat; }
+.PAGE4 h2 { text-align: center; margin-top: 25px;}
+.GRILLE1
+{
+    margin-top: 38px;
+    height: 500px;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.TEXTE{background-color: rgb(245, 245, 245); height: 45px; align-items: center; top: 180px; 
+position: relative; text-align: center; }
+.GRILLE2
+{top: 74px;position: relative;height: 500px;width: 100%;
+display: grid;gap: 20px; grid-template-columns: 1fr 1fr 1fr;
+}
+.Commande
+{
+    height: 450px ; width: 100%;top: 206px; position: relative;
+   display: grid; grid-template-columns: 800px 900px; box-shadow: 2px 3px 1px #b18e8e;
+}
+.FORM{ background-color: #cf956f; padding: -15px;}
+.FORM1{ background-image: url(Cuisinier\ \(10\).jpg); background-repeat: no-repeat;background-size: cover;}
+.JUL
+{
+    height: 45px;width: 186px;border-radius: 37px; position: relative;
+    top: 40px;
+}
+.form input { width: 97%; height: 56px; margin-bottom: 9px; background-color: rgb(245, 245, 2450);}
+.form1 input { width: 97%; height: 66px; margin-top: 9px;background-color: rgb(245, 245, 245);}
+/*  CONFIGURATION DES HOOVER DE CHAQUE PAGE */
+
+
+/*  PAGE1 */
+.BOUBOU:hover
+{
+    background-color: var(--orange-foncé);color: white ;
+}
+
+.btn1:hover , .btn2:hover
+{
+     background-color: var(--orange-foncé);color: white ;
+}
+
+/* PAGE2 */
+.about:hover , .Boutton:hover{background-color: var(--orange-foncé);color: white ;}
+/* PAGE3 */
+.CMD:hover , .CMD1:hover{ background-color: var(--orange-foncé);color: white ;}
+/* PAGE4 */
+.JUL:hover {  background-color: var(--orange-foncé);color: white ;}
+
+
+/* RESOPONSIVE DISIGN  */
+@media (max-width:768px)
+{
+     .hamburger{display: block; position: relative;right: 400px;}
+     .navbar ul div{display: none;flex-direction: column;top: 60px;right:0px;color: blue;
+                ;position:absolute; width: 200px;padding:1rem;height: 400px;width: 130px;}
+      .menu-toogle:checked + .hamburger + .navbar ul div {display: flex;}  
+      .Container{flex-direction: column;text-align: center;}
+      .texte{text-align: center;}
+      .button{flex-direction: column;align-items: center;}
+      .btn1 , .btn2{ width: 80%;}
+      .IMAGE{order: 2; margin-top: 2rem;height: 400px;width: 380px;}  
+      
+      /* PAGE2 */
+      .ABOUT{grid-template-columns: 1fr; grid-template-rows: auto auto;}
+      .IMG{ order: 1; height: 300px;background-size: contain; height: 400px;width: 400px;}
+      .IMG1{order: 2; text-align: left; margin-top: -120px;}
+      .IMG1 p  {position: relative; top: -40px;}
+      .IMG1 .para{position: relative;top: -77px;}
+      .ABOUT .about{position: relative;font-size: 16px;top: -70px; width: 100px;}
+      .SPECIAL{ text-align: center;padding: 20px;}
+      .BOUTTON{display: grid;  grid-template-columns: 180px 180px; height: 140px; top: 10px;}
+      .Boutton{width: 70%;font-size: 16px;}
+      .Menu{flex-direction: column;}
+      .Menu2 ul{text-align: left; left: -20px; position: relative;}
+      .MENU{width: 80%; height: 60%; margin-top: 50px;}
+      .Menu1{background-size: 90%;}
+
+      /* PAGE3 */
+     .Presentation1{grid-template-columns: 1fr; grid-template-rows: auto auto;} 
+     .PAGE3{margin-top: 590px;}
+     .Presentation2{grid-template-columns: 1fr; margin-top: 1200px;}
+
+     /* PAGE4 */
+        
+}
