@@ -1,0 +1,56 @@
+body
+{
+   align-items: center;
+   justify-content: center;
+   background-image: url(FOND.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+div
+{
+    height: 600px;
+    width: 500px;
+     background-color: white;
+    color: white;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -500px;
+    top: 25px;
+    
+}
+ label
+{
+    text-align: center;
+    padding-top: 45px;
+}
+h2 { text-align: center;}
+
+form input
+{
+    width: 54%;
+    height: 40px;
+    border-radius: 28px;
+   margin: 23px;
+   align-items: center;
+   justify-content: center;
+position: relative; left: 75px;
+ gap: 3px;
+}
+
+button 
+{
+    position: relative;
+    top: 27px;
+    width: 54%;
+    height: 40px;
+    background-color: rgb(212, 20, 20);
+     border-radius: 26px;
+     left: 100px;
+}
+
+
+
+
