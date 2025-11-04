@@ -1,54 +1,198 @@
-body
-{
-   align-items: center;
-   justify-content: center;
-   background-image: url(FOND.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
+/* Variables globales */
+:root {
+    --primary-color: #d41414;
+    --background-color: rgba(255, 255, 255, 0.85);
+    --text-color: #333333;
+    --input-border: #e0e0e0;
+    --input-focus: #d41414;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --border-radius: 28px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --border-color: rgba(212, 20, 20, 0.5);
 }
 
-div
-{
-    height: 600px;
-    width: 500px;
-     background-color: white;
-    color: white;
-    border: none;
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    right: -500px;
-    top: 25px;
-    
+    background-image: url(FOND.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    padding: var(--spacing-md);
 }
- label
-{
+
+/* Titre principal */
+.restaurant-title {
     text-align: center;
-    padding-top: 45px;
-}
-h2 { text-align: center;}
-
-form input
-{
-    width: 54%;
-    height: 40px;
-    border-radius: 28px;
-   margin: 23px;
-   align-items: center;
-   justify-content: center;
-position: relative; left: 75px;
- gap: 3px;
+    color: white;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: var(--spacing-lg);
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    animation: glowText 2s infinite alternate;
 }
 
-button 
-{
+@keyframes glowText {
+    from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 2px 2px 15px rgba(212, 20, 20, 0.8);
+    }
+}
+
+/* Container du formulaire */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--background-color);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 10px 25px var(--shadow-color);
+    animation: slideIn 0.5s ease-out;
+    border: 3px solid var(--border-color);
     position: relative;
-    top: 27px;
-    width: 54%;
-    height: 40px;
-    background-color: rgb(212, 20, 20);
-     border-radius: 26px;
-     left: 100px;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 1px solid white;
+    border-radius: 22px;
+    pointer-events: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* En-tête du formulaire */
+h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-lg);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Groupe de champs */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Champs de saisie */
+form input {
+    width: 100%;
+    height: 50px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    padding: 0 var(--spacing-md);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(212, 20, 20, 0.2);
+    background-color: white;
+}
+
+/* Bouton */
+button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-md);
+}
+
+button:hover {
+    background-color: #b31212;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: var(--spacing-md);
+        margin: var(--spacing-sm);
+    }
+
+    form input {
+        height: 45px;
+    }
+
+    button {
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: var(--spacing-sm);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form input,
+    button {
+        height: 40px;
+        font-size: 0.9rem;
+    }
 }
 
 
